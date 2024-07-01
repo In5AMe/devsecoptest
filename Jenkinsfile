@@ -18,7 +18,6 @@ node ('Ubuntu-app-agent'){
     
      docker.withRegistry('https://registry.hub.docker.com', 'training_creds') {
             app.push("latest")
-        			}
          }
     stage('SECURITY-IMAGE-SCANNER'){
         build 'SECURITY-IMAGE-SCANNER-AQUAMICROSCANNER'
